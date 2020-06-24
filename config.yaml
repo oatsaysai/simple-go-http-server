@@ -1,0 +1,21 @@
+Log:
+    Level: debug
+    Color: true
+    JSON: false
+  
+# Use on "serve" command
+HTTPAPIServerPort: 8888
+
+# Use on "migrate-db" and "serve" commands
+Postgresql:
+    DBHost: "localhost"
+    DBPort: "5432"
+    DBUsername: "postgres"
+    DBPassword: "postgres"
+    DBName: "simple_db"
+    MaxOpenConns: 100
+    MaxConnLifetime: 300 # Seconds
+
+# Use on "serve" command
+App:
+    MaxStringLength: 15
