@@ -56,3 +56,27 @@ curl \
   --request GET \
   http://localhost:8888/api/list_string
 ```
+
+## Install GO on Ubuntu 18.04
+
+```sh
+wget https://dl.google.com/go/go1.14.linux-amd64.tar.gz
+```
+
+```sh
+sudo tar -xvf go1.14.linux-amd64.tar.gz
+sudo mv go /usr/local
+```
+
+```sh
+vi ~/.bashrc
+
+# Add to end of file
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+source ~/.bashrc
+```
+
+
