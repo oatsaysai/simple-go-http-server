@@ -1,5 +1,11 @@
 # Simple GO HTTP Server
 
+## Unit test
+
+```sh
+go test ./app -v -count=1
+```
+
 ## Run postgres container
 
 ```sh

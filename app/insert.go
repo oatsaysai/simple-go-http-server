@@ -58,5 +58,4 @@ func insertString(
 	return &InsertStringResponse{
 		ID: stringID,
 	}, nil
-
 }
