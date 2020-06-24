@@ -38,6 +38,14 @@ func insertString(
 		}
 	}
 
+	// check params with some business requirement
+	if len(params.Data) > appConfig.MaxStringLength {
+		return nil, &e.UserError{
+			Code:    e.DataIsTooLong,
+			Message: "Data is too long",
+		}
+	}
+
 	stringID, err := insertStringToDB(params.Data)
 	if err != nil {
 		logger.Errorf("insert string to DB error: %s", err.Error())

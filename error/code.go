@@ -10,4 +10,5 @@ const (
 	InvalidJSONString    uint64 = _internalCode + 5
 	InsertDBError        uint64 = _internalCode + 6
 	InquiryDBError       uint64 = _internalCode + 7
+	DataIsTooLong        uint64 = _internalCode + 8
 )
