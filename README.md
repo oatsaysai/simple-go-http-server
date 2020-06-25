@@ -79,4 +79,22 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 source ~/.bashrc
 ```
 
+## Docker
 
+### Build docker image
+
+```sh
+docker build -t simple-go-http-server .
+```
+
+### Migrate database by docker
+
+```sh
+docker run --rm -v $(pwd)/config.yaml:/root/config.yaml simple-go-http-server:latest migrate-db
+```
+
+### Run HTTP server by docker
+
+```sh
+docker run -d -p 8888:8888 -v $(pwd)/config.yaml:/root/config.yaml simple-go-http-server:latest serve
+```
