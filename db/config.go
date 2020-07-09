@@ -37,7 +37,7 @@ func InitConfig() (*Config, error) {
 		config.DBPassword = "postgres"
 	}
 	if config.DBName == "" {
-		config.DBName = "ofp_currency_orchestrator_db"
+		config.DBName = "simple_db"
 	}
 	return config, nil
 }
